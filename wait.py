@@ -11,7 +11,9 @@ class Waiter:
         self.browser = browser
 
     def wait(self, locator, value):
+        """Ждать в соответствии с условием"""
         WebDriverWait(self.browser, 10).until(e_x.presence_of_element_located((locator, value)))
 
     def sleep(self, seconds):
+        """Ждать определённое количество секунд"""
         time.sleep(seconds)
